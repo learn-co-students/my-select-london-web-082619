@@ -1,3 +1,9 @@
 def my_select(collection)
- # your code here!
+ sorted = []
+ collection.each do |el|
+   if yield(el)
+     sorted << el
+ end
+ end
+ sorted
 end
